@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navid Safaei — DevOps Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#06b6d4',
+            'accent-dark': '#0891b2',
+          },
+          fontFamily: {
+            mono: ['"JetBrains Mono"', 'Fira Mono', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-slate-950 text-slate-200 font-['Inter']">
+
+  <!-- NAV -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-slate-950/80 backdrop-blur border-b border-slate-800/50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <span class="font-mono text-accent font-semibold text-lg">ns<span class="text-slate-400">@devops</span></span>
+      <ul class="hidden md:flex gap-8 text-sm text-slate-400">
+        <li><a href="#about"      class="nav-link hover:text-accent transition-colors">About</a></li>
+        <li><a href="#skills"     class="nav-link hover:text-accent transition-colors">Skills</a></li>
+        <li><a href="#experience" class="nav-link hover:text-accent transition-colors">Experience</a></li>
+        <li><a href="#projects"   class="nav-link hover:text-accent transition-colors">Projects</a></li>
+        <li><a href="#contact"    class="nav-link hover:text-accent transition-colors">Contact</a></li>
+      </ul>
+      <button id="menu-btn" class="md:hidden text-slate-400 hover:text-accent">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800 px-6 py-4">
+      <ul class="flex flex-col gap-4 text-sm text-slate-400">
+        <li><a href="#about"      class="hover:text-accent transition-colors" onclick="closeMobileMenu()">About</a></li>
+        <li><a href="#skills"     class="hover:text-accent transition-colors" onclick="closeMobileMenu()">Skills</a></li>
+        <li><a href="#experience" class="hover:text-accent transition-colors" onclick="closeMobileMenu()">Experience</a></li>
+        <li><a href="#projects"   class="hover:text-accent transition-colors" onclick="closeMobileMenu()">Projects</a></li>
+        <li><a href="#contact"    class="hover:text-accent transition-colors" onclick="closeMobileMenu()">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="min-h-screen flex items-center pt-20">
+    <div class="max-w-6xl mx-auto px-6 py-20">
+      <p class="font-mono text-accent text-sm mb-4 tracking-widest">$ whoami</p>
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
+        Navid Safaei
+      </h1>
+      <h2 class="text-xl md:text-2xl text-slate-400 font-light mb-6">
+        Senior DevOps Engineer &amp; Platform Architect
+      </h2>
+
+      <!-- Terminal typing effect -->
+      <div class="font-mono bg-slate-900 border border-slate-700 rounded-lg p-4 mb-8 max-w-xl">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-3 h-3 rounded-full bg-red-500/70"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-500/70"></span>
+          <span class="w-3 h-3 rounded-full bg-green-500/70"></span>
+          <span class="ml-2 text-xs text-slate-500">terminal</span>
+        </div>
+        <p class="text-slate-400 text-sm">
+          <span class="text-accent">~</span> <span id="typed-text" class="text-white"></span><span id="cursor" class="text-accent animate-pulse">▋</span>
+        </p>
+      </div>
+
+      <!-- Tech stack badges -->
+      <div class="flex flex-wrap gap-2 mb-10">
+        <span class="badge">Kubernetes</span>
+        <span class="badge">ArgoCD</span>
+        <span class="badge">Jenkins</span>
+        <span class="badge">Docker</span>
+        <span class="badge">Terraform</span>
+        <span class="badge">CI/CD</span>
+        <span class="badge">GitOps</span>
+        <span class="badge">Kafka</span>
+      </div>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact"  class="btn-outline">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="section-title">About</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-slate-300 leading-relaxed mb-4">
+            I'm a Senior DevOps Engineer with deep expertise in cloud-native infrastructure, Kubernetes orchestration, and GitOps workflows. I specialize in building resilient, scalable platforms that empower development teams to ship faster and more reliably.
+          </p>
+          <p class="text-slate-300 leading-relaxed mb-4">
+            With hands-on experience migrating banking-sector workloads to Kubernetes — achieving a <span class="text-accent font-semibold">40% reduction in resource usage</span> — I bring both technical depth and business impact to every engagement.
+          </p>
+          <p class="text-slate-300 leading-relaxed">
+            I serve on technical committees, mentor teams on DevOps culture, and continuously explore AI-assisted operations to push the boundaries of platform engineering.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="stat-card">
+            <span class="text-3xl font-bold text-accent">40%</span>
+            <span class="text-sm text-slate-400 mt-1">Resource Reduction</span>
+          </div>
+          <div class="stat-card">
+            <span class="text-3xl font-bold text-accent">K8s</span>
+            <span class="text-sm text-slate-400 mt-1">Banking Migration</span>
+          </div>
+          <div class="stat-card">
+            <span class="text-3xl font-bold text-accent">GitOps</span>
+            <span class="text-sm text-slate-400 mt-1">First Approach</span>
+          </div>
+          <div class="stat-card">
+            <span class="text-3xl font-bold text-accent">CI/CD</span>
+            <span class="text-sm text-slate-400 mt-1">Full Automation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-24 border-t border-slate-800 bg-slate-900/30">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="section-title">Skills</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="skill-card">
+          <div class="skill-icon">☁️</div>
+          <h3 class="skill-title">Cloud &amp; Infrastructure</h3>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="tag">Linux / RHEL</span>
+            <span class="tag">On-Prem K8s</span>
+            <span class="tag">Bare Metal</span>
+            <span class="tag">Networking</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🔄</div>
+          <h3 class="skill-title">CI/CD &amp; GitOps</h3>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="tag">Jenkins</span>
+            <span class="tag">ArgoCD</span>
+            <span class="tag">GitLab CI</span>
+            <span class="tag">Bitbucket</span>
+            <span class="tag">Groovy</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">📦</div>
+          <h3 class="skill-title">Containers &amp; Orchestration</h3>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="tag">Kubernetes</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Helm</span>
+            <span class="tag">Kustomize</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <h3 class="skill-title">Monitoring &amp; Observability</h3>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="tag">Prometheus</span>
+            <span class="tag">Grafana</span>
+            <span class="tag">Filebeat</span>
+            <span class="tag">ELK Stack</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🔐</div>
+          <h3 class="skill-title">Security &amp; Auth</h3>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="tag">Keycloak SSO</span>
+            <span class="tag">RBAC</span>
+            <span class="tag">Network Policies</span>
+            <span class="tag">Secrets Mgmt</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">⚡</div>
+          <h3 class="skill-title">Automation &amp; Messaging</h3>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="tag">Bash</span>
+            <span class="tag">Kafka</span>
+            <span class="tag">Python</span>
+            <span class="tag">Terraform</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="py-24 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="section-title">Experience</h2>
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-slate-700"></div>
+
+        <div class="space-y-10">
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="flex flex-wrap items-center gap-3 mb-2">
+                <h3 class="text-white font-semibold text-lg">Senior DevOps Engineer</h3>
+                <span class="text-xs font-mono bg-accent/10 text-accent border border-accent/20 px-2 py-0.5 rounded">Current</span>
+              </div>
+              <p class="text-accent text-sm font-mono mb-2">Banking Sector · Iran</p>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Led end-to-end migration of banking workloads to Kubernetes. Designed GitOps pipelines with ArgoCD and Jenkins. Reduced infrastructure resource consumption by 40%. Served as technical committee member for platform architecture decisions.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="tag">Kubernetes</span><span class="tag">ArgoCD</span><span class="tag">Jenkins</span><span class="tag">Keycloak</span><span class="tag">Kafka</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="flex flex-wrap items-center gap-3 mb-2">
+                <h3 class="text-white font-semibold text-lg">DevOps Engineer</h3>
+              </div>
+              <p class="text-accent text-sm font-mono mb-2">Financial Services · Iran</p>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Built and maintained CI/CD pipelines for microservices. Implemented monitoring stacks with Prometheus and Grafana. Managed Docker-based deployments and introduced infrastructure-as-code practices.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="tag">Docker</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Bash</span><span class="tag">GitLab CI</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="flex flex-wrap items-center gap-3 mb-2">
+                <h3 class="text-white font-semibold text-lg">Systems &amp; Linux Administrator</h3>
+              </div>
+              <p class="text-accent text-sm font-mono mb-2">Enterprise · Iran</p>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Administered RHEL 6.6 environments, managed legacy system migrations, and automated operational tasks with Bash scripting. Laid the foundation for later DevOps transformation initiatives.
+              </p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <span class="tag">RHEL 6.6</span><span class="tag">Linux</span><span class="tag">Bash</span><span class="tag">Networking</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-24 border-t border-slate-800 bg-slate-900/30">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="section-title">Projects</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="project-card">
+          <div class="flex items-start justify-between mb-3">
+            <span class="text-2xl">🚀</span>
+            <span class="text-xs font-mono text-slate-500">GitOps</span>
+          </div>
+          <h3 class="text-white font-semibold mb-2">Banking K8s Migration</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Full migration of banking microservices to Kubernetes with GitOps workflows, achieving 40% resource reduction and zero-downtime deployments.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag">Kubernetes</span><span class="tag">ArgoCD</span><span class="tag">Helm</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="flex items-start justify-between mb-3">
+            <span class="text-2xl">🔄</span>
+            <span class="text-xs font-mono text-slate-500">CI/CD</span>
+          </div>
+          <h3 class="text-white font-semibold mb-2">Unified CI/CD Platform</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Designed a multi-team Jenkins pipeline framework with shared libraries, automated testing gates, and ArgoCD-based progressive delivery.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag">Jenkins</span><span class="tag">Groovy</span><span class="tag">ArgoCD</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="flex items-start justify-between mb-3">
+            <span class="text-2xl">📊</span>
+            <span class="text-xs font-mono text-slate-500">Observability</span>
+          </div>
+          <h3 class="text-white font-semibold mb-2">Observability Stack</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            End-to-end monitoring solution with Prometheus alerting, Grafana dashboards, and Filebeat log aggregation for Kubernetes workloads.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Filebeat</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="flex items-start justify-between mb-3">
+            <span class="text-2xl">🔐</span>
+            <span class="text-xs font-mono text-slate-500">Security</span>
+          </div>
+          <h3 class="text-white font-semibold mb-2">SSO &amp; Identity Platform</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Deployed Keycloak SSO across microservices with OIDC/OAuth2 integration, RBAC policies, and seamless Kubernetes ingress authentication.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag">Keycloak</span><span class="tag">OIDC</span><span class="tag">K8s</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="flex items-start justify-between mb-3">
+            <span class="text-2xl">⚡</span>
+            <span class="text-xs font-mono text-slate-500">Messaging</span>
+          </div>
+          <h3 class="text-white font-semibold mb-2">Kafka Event Streaming</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            Deployed and operated Kafka clusters on Kubernetes for high-throughput event streaming between banking microservices.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag">Kafka</span><span class="tag">Kubernetes</span><span class="tag">Strimzi</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="flex items-start justify-between mb-3">
+            <span class="text-2xl">🌐</span>
+            <span class="text-xs font-mono text-slate-500">Web</span>
+          </div>
+          <h3 class="text-white font-semibold mb-2">Personal Portfolio</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">
+            This portfolio — a static site built with Django (dev), Tailwind CSS, and Flowbite. Deployed as a static export on GitHub Pages.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag">Django</span><span class="tag">Tailwind</span><span class="tag">SQLite</span>
+          </div>
+          <div class="mt-4">
+            <a href="https://github.com/navidsafaei" target="_blank" rel="noopener" class="text-accent text-xs font-mono hover:underline">github.com/navidsafaei →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 border-t border-slate-800">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="section-title text-center">Get in Touch</h2>
+      <p class="text-slate-400 mb-10 leading-relaxed">
+        Open to interesting infrastructure challenges, platform engineering roles, and DevOps consulting. Let's build something reliable together.
+      </p>
+
+      <a href="mailto:navid@example.com" class="btn-primary text-lg px-8 py-4 mb-12 inline-block">
+        ✉ Send Email
+      </a>
+
+      <div class="flex justify-center gap-6 flex-wrap">
+        <a href="https://github.com/navidsafaei" target="_blank" rel="noopener" class="contact-link">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/navidsafaei" target="_blank" rel="noopener" class="contact-link">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:navid@example.com" class="contact-link">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <span class="font-mono text-slate-500 text-sm">© 2026 Navid Safaei</span>
+      <span class="font-mono text-slate-600 text-xs">Built with HTML · Tailwind CSS · Vanilla JS</span>
+      <div class="flex gap-4">
+        <a href="https://github.com/navidsafaei"   target="_blank" rel="noopener" class="text-slate-500 hover:text-accent transition-colors text-sm">GitHub</a>
+        <a href="https://linkedin.com/in/navidsafaei" target="_blank" rel="noopener" class="text-slate-500 hover:text-accent transition-colors text-sm">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

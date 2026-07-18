@@ -1,0 +1,85 @@
+/* Base */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+/* Reusable component classes */
+.badge {
+  @apply font-mono text-xs bg-slate-800 text-cyan-400 border border-slate-700 px-3 py-1 rounded-full;
+}
+
+.tag {
+  @apply text-xs bg-slate-800/80 text-slate-300 border border-slate-700/50 px-2 py-0.5 rounded;
+}
+
+.btn-primary {
+  @apply inline-block bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:-translate-y-0.5;
+}
+
+.btn-outline {
+  @apply inline-block border border-slate-600 hover:border-cyan-500 text-slate-300 hover:text-cyan-400 font-semibold px-6 py-3 rounded-lg transition-all duration-200;
+}
+
+.section-title {
+  @apply text-2xl md:text-3xl font-bold text-white mb-12 relative;
+}
+
+.section-title::after {
+  content: '';
+  @apply block w-12 h-0.5 bg-cyan-500 mt-3;
+}
+
+.stat-card {
+  @apply flex flex-col items-center justify-center bg-slate-900 border border-slate-700/50 rounded-xl p-6 text-center hover:border-cyan-500/30 transition-colors;
+}
+
+.skill-card {
+  @apply bg-slate-900 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-200 hover:-translate-y-1;
+}
+
+.skill-icon {
+  @apply text-2xl mb-2;
+}
+
+.skill-title {
+  @apply text-white font-semibold text-sm;
+}
+
+.project-card {
+  @apply bg-slate-900 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-200 hover:-translate-y-1 flex flex-col;
+}
+
+.contact-link {
+  @apply flex items-center gap-2 text-slate-400 hover:text-cyan-400 transition-colors font-mono text-sm border border-slate-700 hover:border-cyan-500/50 px-4 py-2 rounded-lg;
+}
+
+/* Timeline */
+.timeline-item {
+  @apply relative pl-12 md:pl-20;
+}
+
+.timeline-dot {
+  @apply absolute left-2 md:left-6 top-1.5 w-4 h-4 rounded-full bg-cyan-500 border-4 border-slate-950 z-10;
+}
+
+.timeline-content {
+  @apply bg-slate-900 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/20 transition-colors;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0f172a; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #06b6d4; }
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
