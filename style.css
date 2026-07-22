@@ -54,8 +54,18 @@ html { scroll-behavior: smooth; }
 }
 
 /* Timeline */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;           /* pin to left edge */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent); /* or your accent color */
+}
 .timeline-item {
-  @apply relative pl-12 md:pl-20;
+  position: relative;
+  padding-left: 2rem;
 }
 
 .timeline-dot {
