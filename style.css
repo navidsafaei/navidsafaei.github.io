@@ -57,7 +57,7 @@ html { scroll-behavior: smooth; }
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: 0;           /* pin to left edge */
+  left: 2%;           /* pin to left edge */
   top: 0;
   bottom: 0;
   width: 2px;
@@ -65,7 +65,7 @@ html { scroll-behavior: smooth; }
 }
 .timeline-item {
   position: relative;
-  padding-left: 2rem;
+  padding-left: 5rem;
 }
 
 .timeline-dot {
